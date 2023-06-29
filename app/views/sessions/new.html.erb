@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<%= form_with(url: sessions_path) do |form| %>
+  <%= form.label :email %>
+  <%= form.email_field :email, name: "session[email]", required: true %>
+
+  <%= form.label :password %>
+  <%= form.password_field :password, name: "session[password]", required: true %>
+
+  <%= form.submit 'Log in' %>
+<% end %>
